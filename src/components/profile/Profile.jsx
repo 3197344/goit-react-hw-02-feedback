@@ -6,10 +6,13 @@ export const Profile = () => {
             <div
                 class="description"
                 style={{
-                    height: '100vh',
-                    padding: '15px',
-                    
-                    display: 'block',
+                    margin: '0 auto',
+                    marginTop: '10px',
+                    border: '2px solid tomato',
+                    width: '150px',
+                    padding: '20px 3px 10px',
+                    display: 'flex',
+                    flexWrap: 'wrap',
                     justifyContent: 'center',
                     alignItems: 'center',
                     fontSize: 16,
@@ -22,32 +25,36 @@ export const Profile = () => {
                     class="avatar"
                     width="150"
                 />
-                <p class="name">{user.username}</p>
-                <p class="tag">@{user.tag}</p>
-                <p class="location">{user.location}</p>
+                <p class="name"style={{margin: '5px',}}>{user.username}</p>
+                <p class="tag"style={{margin: '5px',}}>@{user.tag}</p>
+                <p class="location"style={{margin: '5px',}}>{user.location}</p>
             </div>
 
             <ul class="stats"
                 style={{
-                    border: '2px solid tomato',
+                    width: '150px',
+                    
                     display: 'block',
-                    justifyContent: 'center',
-                    alignItems: 'center',
+                    padding: '5px',
                     fontSize: 16,
                     textTransform: 'uppercase',
-                    color: '#010101',
+                    color: 'white',
+                    listStyle: 'none',
+                    margin: '0 auto',
+                    
+                    backgroundColor: 'tomato',
                 }}>
-                <li>
+                <li style={{padding: '5px',}}>
                     <span class="label">Followers</span>
-                    <span class="quantity">{user.stats.followers}</span>
+                    <span class="quantity"> {user.stats.followers}</span>
                 </li>
-                <li>
+                <li style={{padding: '5px',}}>
                     <span class="label">Views</span>
-                    <span class="quantity">{user.stats.views}</span>
+                    <span class="quantity"> {user.stats.views}</span>
                 </li>
-                <li>
+                <li style={{padding: '5px',}}>
                     <span class="label">Likes</span>
-                    <span class="quantity">{user.stats.likes}</span>
+                    <span class="quantity"> {user.stats.likes}</span>
                 </li>
             </ul>
         </div>
