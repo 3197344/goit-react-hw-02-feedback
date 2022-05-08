@@ -1,0 +1,23 @@
+.stats {
+    width: 320px;
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style: none;
+    margin: 0 auto;
+    
+    font-size: 20px;
+}
+.list{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.label{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(146, 144, 144);
+    background-color: rgb(230, 230, 230);
+    font-size: 15px;
+    cursor: pointer;
+}
+
