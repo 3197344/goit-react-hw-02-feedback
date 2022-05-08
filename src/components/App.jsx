@@ -4,8 +4,6 @@ import Layout from './Layout/Layout';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
 import Statistics from './Statistics/Statistics';
-// import CardInterface from './CardInterface/CardInterface';
-// import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import About from "./aboutFeedback/aboutFeedback";
 
 
