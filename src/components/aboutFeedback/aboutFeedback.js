@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './aboutFeedback.module.css';
 
-const About = ({ onWriteFeedback }) => {
+const About = ({ onLeaveFeedback }) => {
     
     return (
         <ul className={s.stats}>
@@ -9,7 +9,7 @@ const About = ({ onWriteFeedback }) => {
                 <button className={s.label}
                     type="button"
                     name="good"
-                    onClick={onWriteFeedback}
+                    onClick={onLeaveFeedback}
                 >
                     good
                 </button>
@@ -19,7 +19,7 @@ const About = ({ onWriteFeedback }) => {
                 <button className={s.label}
                     type="button"
                     name="neutral"
-                    onClick={onWriteFeedback}
+                    onClick={onLeaveFeedback}
                 >
                     neutral
                 </button>
@@ -29,7 +29,7 @@ const About = ({ onWriteFeedback }) => {
                 <button className={s.label}
                     type="button"
                     name="bad"
-                    onClick={onWriteFeedback}
+                    onClick={onLeaveFeedback}
                 >
                     bad
                 </button>

@@ -37,7 +37,7 @@ countTotalFeedback = () => {
     return (
       <Layout>
           <Section title="Please leave feedback">
-            <About onWriteFeedback={this.clickHandler} />
+            <About onLeaveFeedback={this.clickHandler} />
           </Section>
           <Section title="Statistics">
             {total ? (
