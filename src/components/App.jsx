@@ -14,7 +14,7 @@ export class App extends Component {
     bad: 0,
   };
 
-clickHandler = event => {
+onLeaveFeedback = event => {
     const { name } = event.target;
     this.setState(state => ({ [name]: state[name] + 1 }));
   };
@@ -33,11 +33,14 @@ countTotalFeedback = () => {
     const total = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage();
     const { good, neutral, bad } = this.state;
-
+    const objKey = Object.keys(this.state);
     return (
       <Layout>
           <Section title="Please leave feedback">
-            <About onLeaveFeedback={this.clickHandler} />
+          <About
+            onLeaveFeedback={this.onLeaveFeedback}
+            options={objKey}
+          />
           </Section>
           <Section title="Statistics">
             {total ? (

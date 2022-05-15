@@ -1,43 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './aboutFeedback.module.css';
 
-const About = ({ onLeaveFeedback }) => {
+const About = ({options, onLeaveFeedback }) => {
     
     return (
-        <ul className={s.stats}>
-            <li className={s.list}>
-                <button className={s.label}
-                    type="button"
-                    name="good"
-                    onClick={onLeaveFeedback}
-                >
-                    good
-                </button>
-                
-            </li>
-            <li className={s.list}>
-                <button className={s.label}
-                    type="button"
-                    name="neutral"
-                    onClick={onLeaveFeedback}
-                >
-                    neutral
-                </button>
+            <>
+            {options.map(option => (
+                <div className={s.list}>
                     
-            </li>
-            <li className={s.list}>
-                <button className={s.label}
-                    type="button"
-                    name="bad"
-                    onClick={onLeaveFeedback}
-                >
-                    bad
-                </button>
-                    
-            </li>
-        </ul>
+            <button
+            className={s.label}
+            key={option}
+            type="button"
+            name={option}
+            onClick={onLeaveFeedback}
+            >
+            {option}
+            </button></div>
+        ))}
+        </>
     );
 };
-    
+
+  About.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 export default About;
 
